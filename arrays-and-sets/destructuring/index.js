@@ -28,4 +28,3 @@ let regularMeatDishes;
 // Finally, use the spread operator to create these two arrays as well
 let chefsDishes;
 let regularDishes;
-console.log(chefsMeatDishes);
