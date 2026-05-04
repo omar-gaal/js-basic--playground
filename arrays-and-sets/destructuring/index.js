@@ -13,17 +13,19 @@ const fishDishes = [
 ];
 const meatDishes = ["Lasagna", "Spaghetti", "Satay Chicken Skewers"];
 
-let [fishS, ...others] = fishDishes;
+let [fishS, ...othersFishDishes] = fishDishes;
 let [noS, sMeatDishesFirst, sMeatDishesSecond] = meatDishes;
 let sDishes = [fishS, sMeatDishesFirst, sMeatDishesSecond];
+let [normalMeatDish] = meatDishes;
 
 // Modify these four variables first
 let chefsFishDishes = sDishes;
-let regularFishDishes;
+let regularFishDishes = [othersFishDishes];
 
-let chefsMeatDishes;
+let chefsMeatDishes = [normalMeatDish];
 let regularMeatDishes;
 
 // Finally, use the spread operator to create these two arrays as well
 let chefsDishes;
 let regularDishes;
+console.log(chefsMeatDishes);
