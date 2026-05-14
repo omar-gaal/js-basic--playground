@@ -1,15 +1,25 @@
 // Challenge:
-// 1. Update text in the Scrimba mini-browser to match the title of this cast
-// 2. Create an h2 with class 'tagline' and text "I can create HTML elements!"
-// Add it right under the modified text.
+// 1. Select h1 and add a click event listener.
+// Log the text from the element to the console.
 
-// 1
-let theH1 = (document.querySelector("h1").innerHTML = "title of this cast");
+// If you're not sure how to get text, feel free to check out hint.js
 
-// 2
-let h2 = document.createElement("h2");
-let h2Text = document.createTextNode("I can create HTML elements!");
-h2.appendChild(h2Text);
+// 2. Add the same functionality to all the elements displayed
+// in Scrimba web browser. Finally, try to trigger the event when you
+// hover the mouse over the elements, instead of when clicking on them
 
-const getBody = document.querySelector("body");
-getBody.appendChild(h2);
+const theH1 = document.querySelector("h1");
+theH1.addEventListener("mouseover", (event) => {
+  console.log(event.target.innerText);
+});
+
+const theH2 = document.querySelector("h2");
+theH2.addEventListener("mouseover", (event) => {
+  console.log(event.target.innerText);
+  alert(event.target.innerText);
+});
+
+const theH3 = document.querySelector("h3");
+theH3.addEventListener("mouseover", (event) => {
+  console.log(event.target.innerText);
+});
