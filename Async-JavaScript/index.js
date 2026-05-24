@@ -25,11 +25,17 @@
 // Here's the endpoint: https://jsonplaceholder.typicode.com/users/3
 
 fetch("https://jsonplaceholder.typicode.com/users/3")
-  .then((response) => response.json())
+  .then((response) => {
+    if (!response.ok) {
+      throw new Error("oops!");
+    }
+    return response.json();
+  })
   .then((data) => {
     const newData = {
       name: data.name,
       company: data.company.name,
     };
     console.log(newData);
-  });
+  })
+  .catch((error) => console.log(error));
